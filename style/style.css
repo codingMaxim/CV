@@ -1,12 +1,14 @@
 * {
   box-sizing: border-box;
+  font-family: "Ramaraja", serif;
 }
 body {
   margin: 0;
-  font-family: "Ramaraja", serif;
+  background-color: rgb(241, 240, 240);
 }
 
-#header {
+.header,
+footer {
   background-color: beige;
   text-align: center;
   padding: 48px 16px;
@@ -28,14 +30,46 @@ h6 {
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
+  background-color: azure;
 }
 
+/*
 #experience,
 #skills,
 #contact {
   border-top: 2px solid gray;
+}*/
+
+.main > * + * {
+  border-top: 2px solid gray;
+  margin-top: 48px;
 }
 
-main {
-  background-color: azure;
+.main:last-child {
+  border: none;
+}
+
+nav > a {
+  margin: 0 20px 0 0;
+}
+
+a {
+  color: dodgeblue;
+}
+
+a:link {
+  color: darkorange;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  background-color: red;
+  color: #fff;
+}
+
+a:active {
+  background-color: hotpink;
 }
