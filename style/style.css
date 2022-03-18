@@ -49,6 +49,15 @@ h6 {
   border: none;
 }
 
+.profession::after {
+  content: "👨‍💻";
+}
+
+::selection {
+  background-color: #000;
+  color: #fff;
+}
+
 nav > a {
   margin: 0 20px 0 0;
 }
