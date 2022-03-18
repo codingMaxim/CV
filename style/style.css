@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Ramaraja", serif;
+}
+
+#header {
+  background-color: beige;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", cursive;
+}
+
+/*nav {
+}*/
+
+#header,
+main {
+  padding: 16px;
+}
+
+#experience,
+#skills,
+#contact {
+  border-top: 2px solid gray;
+}
+
+main {
+  background-color: azure;
+}
