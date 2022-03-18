@@ -7,7 +7,7 @@ body {
   background-color: rgb(241, 240, 240);
 }
 
-.header,
+.site-header,
 footer {
   background-color: beige;
   text-align: center;
@@ -26,7 +26,7 @@ h6 {
 /*nav {
 }*/
 
-.main {
+.site-main {
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
@@ -40,12 +40,12 @@ h6 {
   border-top: 2px solid gray;
 }*/
 
-.main > * + * {
+.site-main > * + * {
   border-top: 2px solid gray;
   margin-top: 48px;
 }
 
-.main:last-child {
+.site-main:last-child {
   border: none;
 }
 
