@@ -9,6 +9,7 @@ body {
 #header {
   background-color: beige;
   text-align: center;
+  padding: 48px 16px;
 }
 
 h1,
@@ -23,8 +24,9 @@ h6 {
 /*nav {
 }*/
 
-#header,
-main {
+.main {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 16px;
 }
 
