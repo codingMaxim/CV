@@ -6,7 +6,6 @@
 
 html {
   font-family: "Ramaraja", serif;
-  font-size: 20px;
 }
 
 body {
@@ -44,7 +43,7 @@ footer {
 }
 
 .hire-me {
-  position: fixed;
+  position: absolute;
   top: 1rem;
   right: 1rem;
   padding: 0.7rem;
@@ -116,4 +115,34 @@ a:hover {
 
 a:active {
   background-color: hotpink;
+}
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+  .hire-me {
+    position: fixed;
+  }
+}
+
+@media print {
+  .navigation {
+    display: none;
+  }
+  .hire-me {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 786px) {
+  .site-main > article + article {
+    margin-top: 4rem;
+  }
 }
