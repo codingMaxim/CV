@@ -1,10 +1,14 @@
 * {
   box-sizing: border-box;
+}
+
+html {
   font-family: "Ramaraja", serif;
 }
 body {
   margin: 0;
   background-color: rgb(241, 240, 240);
+  font-family: inherit;
 }
 
 .site-header,
@@ -33,20 +37,19 @@ h6 {
   background-color: azure;
 }
 
-/*
-#experience,
-#skills,
-#contact {
-  border-top: 2px solid gray;
-}*/
-
-.site-main > * + * {
+/*to prevent border in 1st article*/
+.site-main > article + article {
   border-top: 2px solid gray;
   margin-top: 48px;
 }
 
-.site-main:last-child {
-  border: none;
+.header-exp,
+.subheader-exp {
+  display: inline-block;
+}
+
+.subheader-exp {
+  padding-left: 10px;
 }
 
 .profession::after {
@@ -60,10 +63,6 @@ h6 {
 
 nav > a {
   margin: 0 20px 0 0;
-}
-
-a {
-  color: dodgeblue;
 }
 
 a:link {
