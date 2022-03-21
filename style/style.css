@@ -6,6 +6,7 @@
 
 html {
   font-family: "Ramaraja", serif;
+  font-size: 20px;
 }
 
 body {
@@ -27,17 +28,28 @@ h6 {
 footer {
   background-color: beige;
   text-align: center;
-  padding: 48px 16px;
-  /*font-weight: thin;*/
+  padding: 2.7rem 1rem;
+}
+
+.heading-group {
+  font-size: 4rem;
+}
+
+.main-heading {
+  font-size: 1em;
+}
+
+.profession {
+  font-size: 0.25em;
 }
 
 .hire-me {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.7rem;
   background-color: green;
-  border-radius: 20px;
+  border-radius: 1.7rem;
   color: white;
 }
 .hire-me:hover {
@@ -46,26 +58,25 @@ footer {
 }
 
 .site-main {
-  max-width: 800px;
+  max-width: 70ch;
   margin: 0 auto;
-  padding: 16px;
+  padding: 1rem;
   background-color: azure;
-  /*font-weight: bold;*/
 }
 
 /*to prevent border in 1st article*/
 .site-main > article + article {
   border-top: 2px solid gray;
-  margin-top: 48px;
+  margin-top: 2rem;
 }
 
 .site-main > article {
-  padding: 0 20px;
+  padding: 0 0.7rem;
 }
 
 .heading-offset {
   position: relative;
-  left: -20px;
+  left: -0.7rem;
 }
 
 .header-exp,
@@ -74,7 +85,7 @@ footer {
 }
 
 .subheader-exp {
-  padding-left: 10px;
+  padding-left: 0.5rem;
 }
 
 .profession::after {
@@ -87,7 +98,7 @@ footer {
 }
 
 nav > a {
-  margin: 0 20px 0 0;
+  margin: 0 1rem 0 0;
 }
 
 a:link {
