@@ -144,5 +144,6 @@ a:active {
 @media screen and (min-width: 786px) {
   .site-main > article + article {
     margin-top: 4rem;
+    padding-top: 2rem;
   }
 }
