@@ -9,8 +9,23 @@ html {
 }
 
 body {
+  --border-color: gray;
+  --a-tag-color: rgb(69, 24, 1);
+  --green-gradient-color: rgba(125, 211, 67, 1);
+  --yellow-gradient-color: rgba(170, 183, 24, 1);
+  --brown-gradient-color: rgba(69, 24, 1, 1);
+  --black-gradient-color: #000;
+  --white-gradient-color: #fff;
+  --body-background-color: rgb(241, 240, 240);
+  --main-site-1st-background-color: rgba(181, 238, 174, 1);
+  --main-site-2nd-background-color: rgba(148, 223, 233, 1);
+
   margin: 0;
-  background-color: rgb(241, 240, 240);
+  background: linear-gradient(
+    90deg,
+    var(--main-site-1st-background-color) 0%,
+    var(--main-site-2nd-background-color) 100%
+  );
   font-family: inherit;
 }
 
@@ -23,29 +38,33 @@ h6 {
   font-family: "Bebas Neue", cursive;
 }
 h1:hover {
-  background: -webkit-linear-gradient(120deg, #000 40%, #fff 60%);
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--black-gradient-color) 40%,
+    var(--white-gradient-color) 60%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .site-header {
-  background: rgb(69, 24, 1);
+  background: var(--green-gradient-color);
   background: linear-gradient(
     90deg,
-    rgba(69, 24, 1, 1) 0%,
-    rgba(170, 183, 24, 1) 50%,
-    rgba(125, 211, 67, 1) 100%
+    var(--brown-gradient-color) 0%,
+    var(--yellow-gradient-color) 50%,
+    var(--green-gradient-color) 100%
   );
 }
 
 footer {
-  background: rgb(69, 24, 1);
+  background: var(--brown-gradient-color);
   background: linear-gradient(
     90deg,
-    rgba(125, 211, 67, 1) 0%,
-    rgba(170, 183, 24, 1) 50%,
-    rgba(69, 24, 1, 1) 100%
+    var(--green-gradient-color) 0%,
+    var(--yellow-gradient-color) 50%,
+    var(--brown-gradient-color) 100%
   );
 }
 
@@ -72,26 +91,32 @@ footer {
   top: 1rem;
   right: 1rem;
   padding: 0.7rem;
-  background-color: rgba(125, 211, 67, 1);
+  background-color: var(--green-gradient-color);
   border-radius: 1.7rem;
-  color: white;
+  color: var(--white-gradient-color);
 }
 .hire-me:hover {
-  background-color: azure;
-  color: #000;
+  background-color: var(--white-gradient-color);
+  color: var(--black-gradient-color);
 }
 
 .site-main {
   max-width: 70ch;
   margin: 0 auto;
   padding: 1rem;
-  background-color: lemonchiffon;
+  background-color: var(--white-gradient-color);
 }
 
 /*to prevent border in 1st article*/
 .site-main > article + article {
-  border-top: 2px solid gray;
+  border-top: 5px solid var(--border-color);
+  border-bottom: 5px solid var(--border-color);
+  border-radius: 2em;
   margin-top: 2rem;
+}
+.site-main > article:nth-child(1) {
+  border-bottom: 5px solid var(--border-color);
+  border-radius: 2em;
 }
 
 .site-main > article {
@@ -117,8 +142,8 @@ footer {
 }
 
 ::selection {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--black-gradient-color);
+  color: var(--white-gradient-color);
 }
 
 nav > a {
@@ -140,16 +165,16 @@ nav > a {
 }
 
 a:link {
-  color: rgb(69, 24, 1);
+  color: var(--a-tag-color);
 }
 
 a:visited {
-  color: rgb(69, 24, 1);
+  color: var(--a-tag-color);
 }
 
 a:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: var(--white-gradient-color);
+  color: var(--black-gradient-color);
 }
 
 a:active {
