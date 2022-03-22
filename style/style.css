@@ -22,10 +22,35 @@ h5,
 h6 {
   font-family: "Bebas Neue", cursive;
 }
+h1:hover {
+  background: -webkit-linear-gradient(120deg, #000 40%, #fff 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.site-header {
+  background: rgb(69, 24, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(69, 24, 1, 1) 0%,
+    rgba(170, 183, 24, 1) 50%,
+    rgba(125, 211, 67, 1) 100%
+  );
+}
+
+footer {
+  background: rgb(69, 24, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(125, 211, 67, 1) 0%,
+    rgba(170, 183, 24, 1) 50%,
+    rgba(69, 24, 1, 1) 100%
+  );
+}
 
 .site-header,
 footer {
-  background-color: beige;
   text-align: center;
   padding: 2.7rem 1rem;
 }
@@ -47,7 +72,7 @@ footer {
   top: 1rem;
   right: 1rem;
   padding: 0.7rem;
-  background-color: green;
+  background-color: rgba(125, 211, 67, 1);
   border-radius: 1.7rem;
   color: white;
 }
@@ -60,7 +85,7 @@ footer {
   max-width: 70ch;
   margin: 0 auto;
   padding: 1rem;
-  background-color: azure;
+  background-color: lemonchiffon;
 }
 
 /*to prevent border in 1st article*/
@@ -115,16 +140,16 @@ nav > a {
 }
 
 a:link {
-  color: darkorange;
+  color: rgb(69, 24, 1);
 }
 
 a:visited {
-  color: green;
+  color: rgb(69, 24, 1);
 }
 
 a:hover {
-  background-color: red;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 
 a:active {
