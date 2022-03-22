@@ -99,6 +99,20 @@ footer {
 nav > a {
   margin: 0 1rem 0 0;
 }
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-job {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
 
 a:link {
   color: darkorange;
@@ -121,6 +135,25 @@ a:active {
   html {
     font-size: 18px;
   }
+  .site-main > article + article {
+    margin-top: 4rem;
+    padding-top: 2rem;
+  }
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .header-job {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .subheader-exp {
+    align-self: center;
+  }
+  .skills {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -138,12 +171,5 @@ a:active {
   }
   .hire-me {
     display: none;
-  }
-}
-
-@media screen and (min-width: 786px) {
-  .site-main > article + article {
-    margin-top: 4rem;
-    padding-top: 2rem;
   }
 }
