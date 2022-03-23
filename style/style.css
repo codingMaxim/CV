@@ -37,15 +37,42 @@ h5,
 h6 {
   font-family: "Bebas Neue", cursive;
 }
-h1:hover {
+
+.main-heading {
+  position: relative;
   background: -webkit-linear-gradient(
-    120deg,
-    var(--black-gradient-color) 40%,
-    var(--white-gradient-color) 60%
+    180deg,
+    var(--green-gradient-color) 0%,
+    var(--yellow-gradient-color) 50%,
+    var(--brown-gradient-color) 100%
   );
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: revert;
+  z-index: 1;
+}
+
+.main-heading::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-linear-gradient(
+    180deg,
+    var(--brown-gradient-color) 5%,
+    var(--yellow-gradient-color) 55%,
+    var(--green-gradient-color) 95%
+  );
+  background-clip: text;
+  -webkit-background-clip: revert;
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.main-heading:hover::before {
+  opacity: 1;
 }
 
 .site-header {
@@ -110,13 +137,7 @@ footer {
 /*to prevent border in 1st article*/
 .site-main > article + article {
   border-top: 5px solid var(--border-color);
-  border-bottom: 5px solid var(--border-color);
-  border-radius: 2em;
   margin-top: 2rem;
-}
-.site-main > article:nth-child(1) {
-  border-bottom: 5px solid var(--border-color);
-  border-radius: 2em;
 }
 
 .site-main > article {
@@ -154,6 +175,17 @@ nav > a {
   flex-direction: column;
 }
 
+.nav-link {
+  transition: background-color 0.25s;
+}
+
+.nav-link:focus {
+  background-color: var(--black-gradient-color);
+  color: var(--white-gradient-color);
+  outline-color: var(--white-gradient-color);
+  outline-style: dashed;
+}
+
 .header-job {
   display: flex;
   flex-direction: column;
@@ -175,10 +207,6 @@ a:visited {
 a:hover {
   background-color: var(--white-gradient-color);
   color: var(--black-gradient-color);
-}
-
-a:active {
-  background-color: hotpink;
 }
 
 @media screen and (min-width: 786px) {
